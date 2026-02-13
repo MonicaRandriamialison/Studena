@@ -1,38 +1,79 @@
-1. Lancer le backend Laravel
-Cloner le repo :
+# Studena
+
+## Description
+
+Studena est une plateforme de gestion d'étudiants développée avec Laravel (backend) et Angular (frontend).
+
+## Installation
+
+### Backend Laravel
+
+1. **Cloner le repository**
+```bash
 git clone https://github.com/MonicaRandriamialison/Studena.git
 cd Studena
+```
 
-Installer les dépendances PHP :
+2. **Installer les dépendances PHP**
+```bash
 composer install
+```
 
-Configurer l’environnement :
+3. **Configurer l'environnement**
+```bash
 cp .env.example .env
 php artisan key:generate
+```
 
-Configurer la base de données dans .env (SQLite simple) :
+4. **Configurer la base de données**
+
+Dans le fichier `.env`, configurer SQLite :
+```
 DB_CONNECTION=sqlite
 DB_DATABASE=./database/database.sqlite
+```
 
-Créer le fichier :
+5. **Créer le fichier de base de données**
+```bash
 touch database/database.sqlite
+```
 
-Lancer migrations + seeds :
+6. **Lancer les migrations et seeds**
+```bash
 php artisan migrate --seed
+```
 
-Démarrer le serveur Laravel :
+7. **Démarrer le serveur Laravel**
+```bash
 php artisan serve
-Le backend sera sur http://127.0.0.1:8000 (ou http://localhost:8000).
+```
 
-2. Lancer le frontend Angular
-Dans un autre terminal :
-Aller dans le dossier Angular (exemple) :
-cd Studena/frontend   # ou le chemin réel de ton app Angular
+Le backend sera accessible sur **http://127.0.0.1:8000** (ou http://localhost:8000).
 
-Installer les dépendances Node :
+### Frontend Angular
+
+1. **Aller dans le dossier Angular**
+```bash
+cd studena-frontend
+```
+
+2. **Installer les dépendances Node**
+```bash
 npm install
+```
 
-Lancer l’app Angular :
+3. **Lancer l'application Angular**
+```bash
 ng serve
-Par défaut, Angular tourne sur http://localhost:4200.
+```
 
+L'application sera accessible sur **http://localhost:4200**.
+
+## Technologies utilisées
+
+- **Backend** : Laravel, PHP, SQLite
+- **Frontend** : Angular, TypeScript
+
+## Contributeur
+
+Monica Randriamialison
